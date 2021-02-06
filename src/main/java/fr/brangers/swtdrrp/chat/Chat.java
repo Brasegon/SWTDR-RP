@@ -49,7 +49,7 @@ public class Chat implements Listener {
                 event.setMessage(event.getMessage().replaceFirst("\\*", ""));
                 mode = 3;
             } else if (event.getMessage().charAt(0) == ':') {
-                String format = ChatColor.LIGHT_PURPLE + "[GENERAL] %1$s " + ChatColor.WHITE + "%2$s";
+                String format = ChatColor.GOLD + "[GENERAL] %1$s " + ChatColor.WHITE + "%2$s";
                 event.setFormat(format);
                 event.setMessage(event.getMessage().replaceFirst(":", ""));
                 mode = 4;

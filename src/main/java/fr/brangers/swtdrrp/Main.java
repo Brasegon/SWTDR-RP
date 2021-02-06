@@ -1,6 +1,7 @@
 package fr.brangers.swtdrrp;
 
 import fr.brangers.swtdrrp.chat.Chat;
+import fr.brangers.swtdrrp.register.Register;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -14,6 +15,7 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(new Chat(this), this);
+        Register.registerCommands(this);
         for (Player all : Bukkit.getOnlinePlayers()) {
             localChat.add(all.getUniqueId());
             continue;
